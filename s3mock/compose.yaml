@@ -5,4 +5,4 @@ services:
       - ${iPORT_S3MOCK}:9090
       - 9091:9091
     environment:
-      - initialBuckets=oneimaging-local-development-nelson,oneimaging-local
+      - initialBuckets=pile-local-s3-bucket,pile-another-local-bucket

@@ -3,7 +3,3 @@ services:
     build: ./jwtio/
     ports:
       - "${PORT_JWTIO}:${iPORT_JWTIO}"
-
-# remember, directories are relative to app-compose.yaml when using make app-up
-# that is why it looks like the build directory has an extra level.
-# i assure you, it's fine.
