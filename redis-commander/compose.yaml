@@ -1,0 +1,4 @@
+services: 
+  redis-commander:
+    image: rediscommander/redis-commander
+    ports: [8081:8081]

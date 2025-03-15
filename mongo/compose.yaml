@@ -1,0 +1,15 @@
+services:
+  mongo:
+    init: true
+    image: mongo:6.0.4
+    ports:
+      - "${PORT_MONGO}:${PORT_MONGO}"
+    volumes:
+      - ./mongo/data:/data/db
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s  # Health check interval
+      timeout: 3s   # Health check timeout
+      retries: 5     # Number of retries before declaring the container unhealthy
+
+

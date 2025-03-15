@@ -1,0 +1,8 @@
+services:
+  s3mock:
+    image: adobe/s3mock
+    ports:
+      - ${iPORT_S3MOCK}:9090
+      - 9091:9091
+    environment:
+      - initialBuckets=oneimaging-local-development-nelson,oneimaging-local

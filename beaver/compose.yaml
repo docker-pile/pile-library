@@ -1,0 +1,6 @@
+services:
+  beaver:
+    image: dbeaver/cloudbeaver
+    ports: ["${PORT_BEAVER}:8978"]
+    volumes:
+      - ./beaver/data:/opt/cloudbeaver/workspace

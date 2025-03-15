@@ -1,0 +1,12 @@
+services:
+  mongo-express:
+    depends_on: 
+      mongo:
+        condition: service_healthy
+    # command: "node app mongo-express"
+    image: mongo-express:latest
+    ports:
+      - "${PORT_MONGO_EXPRESS}:8081"
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongo
+
