@@ -2,10 +2,5 @@ services:
   my-yt:
     image: christianfei/my-yt:latest
     ports: ["3000:3000"]
-    # environment: 
-    #   POSTGRES_PASSWORD: pile7113
     volumes:
       - ./my-yt/data:/app/data
-    # restart: always
-    # set shared memory limit when using docker-compose
-    # shm_size: 128mb
